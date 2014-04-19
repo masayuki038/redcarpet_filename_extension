@@ -6,8 +6,8 @@ module RedcarpetFilenameExtension
     INDENT = " " * 2
 
     def initialize(pyg_opts = {})
-      @pyg_opts = pyg_opts
       super
+      @pyg_opts = pyg_opts
     end
 
     def block_code(code, metadata)

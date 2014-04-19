@@ -6,7 +6,7 @@ describe RedcarpetFilenameExtension::BlockCodeWithFilename do
   let(:fixtures_path) {  Pathname.new("../fixtures").expand_path(File.dirname(__FILE__)) }
   let(:sample_path) { fixtures_path.join("sample_with_filename.md") }
 
-  context "When specified lineno option" do
+  context "When specified pygments lineno option" do
     let(:markdown) do
       renderer = described_class.new(linenos: 1)
       Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
@@ -19,7 +19,7 @@ describe RedcarpetFilenameExtension::BlockCodeWithFilename do
     end
   end
 
-  context "When not specified lineno option" do
+  context "When not specified pygments lineno option" do
     let(:markdown) do
       renderer = described_class.new
       Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
